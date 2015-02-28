@@ -11,10 +11,8 @@ module.exports = function(mongoose){
 	Grid.mongo = mongoose.mongo;
 	var conn = mongoose.connection;
 	// Public:
-	conn.once("open",function(){
-
-		return function(req, res, next){
-
+	return function(req, res, next){
+		conn.once("open",function(){
 			if(!req.is("multipart/form-data"))
 				return next();
 
@@ -45,6 +43,6 @@ module.exports = function(mongoose){
 				next();
 			});
 			req.pipe(busboy);
-		};
-	});
+		});
+	};
 };
