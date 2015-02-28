@@ -1,6 +1,6 @@
 {
   "name": "express-mongo-busboy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A express middleware that interconnects busboy and mongo(mongoose) to enable quick file upload to GridFS.",
   "main": "index.js",
   "scripts": {
@@ -20,8 +20,8 @@
     "busboy": "^0.2.9",
     "gridfs-stream": "^1.1.0"
   },
-  "repository" :
-  { "type" : "git",
-    "url" : "http://github.com/R3liant/express-mongo-busboy.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/R3liant/express-mongo-busboy.git"
   }
 }
