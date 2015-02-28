@@ -1,0 +1,23 @@
+{
+  "name": "express-mongo-busboy",
+  "version": "0.1.0",
+  "description": "A express middleware that interconnects busboy and mongo(mongoose) to enable quick file upload to GridFS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "busboy",
+    "mongoose",
+    "gridfs",
+    "GridFS"
+  ],
+  "author": "Carson Page <pagem.carson@gmail.com>",
+  "license": "MIT Licence",
+  "dependencies": {
+    "busboy": "^0.2.9",
+    "gridfs-stream": "^1.1.0"
+  }
+}
