@@ -12,7 +12,7 @@ module.exports = function(mongoose){
 	var conn = mongoose.connection;
 	// Public:
 	return function(req, res, next){
-		conn.once("open",function(){
+		if(conn.readyState == 1)
 			if(!req.is("multipart/form-data"))
 				return next();
 
@@ -43,6 +43,6 @@ module.exports = function(mongoose){
 				next();
 			});
 			req.pipe(busboy);
-		});
+		};
 	};
 };
