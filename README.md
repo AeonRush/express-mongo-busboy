@@ -37,6 +37,6 @@ More options like extension rejection, file number limiting, and file size will 
 
 ## Licence and Contributing
 
-This is licensed under the MIT licence: http://cpage.mit-licence.org/
+This is licensed under the MIT licence: http://cpage.mit-license.org/
 
 Feel free to make a pull request or open up any issues. This module was made for my own purposes, and publishing it was an afterthought. So, if anything needs to be finagled with, fork it and do so!
