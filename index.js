@@ -18,7 +18,7 @@ module.exports = function(options){
 	}
 	// Public:
 	return function(req, res, next){
-		if(conn.readyState == 1){
+		if(!options.mongoose || conn.readyState == 1){
 			if(!req.is("multipart/form-data"))
 				return next();
 
