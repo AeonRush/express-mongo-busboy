@@ -1,6 +1,6 @@
 {
   "name": "express-mongo-busboy",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A express middleware that interconnects busboy and mongo(mongoose) to enable quick file upload to GridFS.",
   "main": "index.js",
   "scripts": {
