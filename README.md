@@ -11,7 +11,7 @@ A elegant way of storing file uploads into GridFS from mongo or mongoose.
 	var emb = require("express-mongo-busboy")({mongoose:mongoose});
 
 	app.post("/uploads",emb,function(req,res){
-		console.log(req.body.files); // [{id:54f26081d2790e802f741c3a,filename:'myupload.jpg'}]
+		console.log(req.body.files); // {upload:{id:54f26081d2790e802f741c3a,filename:'myupload.jpg'}}
 		console.log(req.body.myOtherField) // "Hello World"
 	});
 
@@ -39,4 +39,4 @@ More options like extension rejection, file number limiting, and file size will 
 
 This is licensed under the MIT licence: http://cpage.mit-license.org/
 
-Feel free to make a pull request or open up any issues. This module was made for my own purposes, and publishing it was an afterthought. So, if anything needs to be finagled with, fork it and do so!
+Feel free to make a pull request or open up any issues. If anything needs to be finagled with!

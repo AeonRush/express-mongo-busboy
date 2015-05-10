@@ -25,7 +25,7 @@ module.exports = function(options){
 			if(!req.body)
 				req.body = {};
 
-			var files = [];
+			var files = {};
 			var streams = [];
 			var streams_response = 0;
 
@@ -37,7 +37,7 @@ module.exports = function(options){
 			busboy.on("file", function(fieldname, file, filename, encoding, mimetype){
 				var writeStream = gfs.createWriteStream({filename:filename});
 				file.pipe(writeStream);
-				streams.push(writeStream);
+				streams.push([writeStream,fieldname]);
 				streams_response++;
 			});
 
@@ -49,8 +49,8 @@ module.exports = function(options){
 			busboy.on('finish',function(){
 				req.body.files = files;
 				streams.forEach(function(e,i){
-					e.on("close",function(file){
-						files.push({_id:file._id,filename:file.filename});
+					e[0].on("close",function(file){
+						files[e[1]] = {_id:file._id,filename:file.filename};
 						streams_response--;
 						if(streams_response === 0){
 							next();
